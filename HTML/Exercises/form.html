@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <!--CSS--> <style>
+             body {background-color: #4c72f1;}
+             font {font-family:Arial, Helvetica, sans-serif}    
+      </style>
+        <title>Please fill this form</title> 
+    
+    </head>
+    <img src="http://www.clker.com/cliparts/b/l/0/w/q/3/modified-generic-company-logo.svg.hi.png" width="300px" height="83px">
+    <body> <font>
+    <h1>Please Sign Up Here</h1>
+    <form>
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+            <p>
+                <label for="full-name">Full Name:</label>
+                <input id="full-name" name="Full Name" type="text">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input id="email" name="Email" typ="email">
+            </p>
+            <p>
+                <label for="address">Address:</label>
+                <textarea rows="6" cols="125"></textarea>
+            </p>
+            <p>
+                <label for="phonenumber">Phone Number:</label>
+                <input id="phonenumber" name="Phone Number" type="number">
+            </p>
+            <p>
+                <label for="gender-radio">Gender:</label>
+                <input id="gender-radio" type="radio" name="male" value="Male">Male</input>
+                <input id="gender-radio" type="radio" name="female" value="female">Female</input>
+            </p>
+            <p>
+                <label for="learnedsource">Where did you learn about us from?</label>
+                <input type="text" name="source" list="sourcelist"/>
+                <datalist id="sourcelist">
+                  <select name="allsources">
+                  <option value="Person">A friend/colleague</option>
+                  <option value="The Internet">Social Media</option>
+                  <option value="Work">The office/workspace</option>
+                  <option value="None">My answer isn't stated above</option>
+                  </select> 
+                </datalist>
+            </p>
+        </fieldset>
+    </form>
+    <br>
+    <form>
+            <fieldset>
+              <legend><b>Quick Survey</b></legend>
+              <p>
+                <div>Have you ever purchased a product from us?</div>
+                  <input id="survey-radio" type="radio" name="Yes" value="Yes">Yes
+                  <input id="survey-radio" type="radio" name="No" value="No">No
+                <br>
+                <br>
+                <div>If so, what product did you purchase? <b>(Optional)</b></div>
+                  <input type="text" name="Product List" list="products"/>
+                  <datalist id="products">
+                      <select name="allproducts">
+                        <option value="Fans">Fans</option>
+                        <option value="Ovens">Ovens</option>
+                        <option value="Microwaves">Microwaves</option>
+                      </select>
+                  </datalist>
+                  <br>
+                  <br>
+                  <div>How likely are you to recommend us to others? <b>(Please tick one)</b></div>
+                  <input id="writing-checkbox" type="checkbox" name="rating" value="very likely">Very likely</input>
+                  <input id="writing checkbox" type="checkbox" name="rating" value="likely">Likely</input>
+                  <input id="writing checkbox" type="checkbox" name="rating" value="idk">I don't know</input>
+                  <input id="writing checkbox" type="checkbox" name="rating" value="unlikely">Unlikely</input>
+                  <input id="writing checkbox" type="checkbox" name="rating" value="very unlikely">Very unlikely</input>
+                  <br>
+                  <h4>Thank you for your input!</h4>
+                      
+                        <input type="Submit" Value="Submit"/>
+                        <form action="welcome.html" method="POST"></form>
+                
+              </p>
+            </fieldset>
+          </form>
+          </body> </font>
+</html>
