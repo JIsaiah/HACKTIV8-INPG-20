@@ -2,15 +2,61 @@
 <html>
     <head>
         <title>Basic To-Do List</title>
+        <!-- CSS -->
         <link href="style.css" rel="stylesheet" type="text/css">
+        <!-- Nunito font -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <!-- JavaScript -->
+        <script src="ToDoList.js"></script>
     </head>
     <body>
-        <div style="width:100%;" id="headerRec"></div>
         <header>
-            <div>
-            <input type="text" placeholder="Enter here" id="headerEntry">
-            </div>
+            <!-- to.Do logo -->
+            <img src="Untitled-1.png" alt="toDo logo" id="mainlogo">
+            <!-- Search Bar -->
+            <input type="text" id="headerEntry" placeholder="What would you like to do today?">
+            <div style="width:100%;" id="headerRec"></div>
+            <!-- The plus on the add button -->
+            <img src="Untitled-2.png" alt="add button" id="plussign">
+            <button id="add" data-modal="modal-1"></button>
         </header>
 
+        <h1 id="incompTitle">Incomplete Tasks</h1>
+        <div class="undoneContainer">
+            <!-- Uncompleted task container -->
+            <ul class="todo">
+                <li>
+                    <img src="Untitled-3.png" alt="trashbin" id="heejin">
+                    <label class="taskLabel">Test1</label>
+                    <input type="button" id="trashbutton">
+                </li>
+            </ul>
+            <ul class="todo">
+                <li>
+                    <img src="Untitled-3.png" alt="trashbin" id="heejin">
+                    <label class="taskLabel">Test2</label>
+                    <input type="button" id="trashbutton">
+                </li>
+            </ul>
+        </div>
+
+        <h1 id="compTitle">Complete Tasks</h1>
+        <div class="doneContainer">
+            <!-- Completed task container -->
+            <ul class="done">
+                <li>
+                    <img src="Untitled-3.png" alt="trashbin" id="heejin">
+                    <label class="taskComplete">Test3gfdsdfghjkkkoinubyvtcrxezwsedrftgyhujikominjhbgvcfdxswertyuiopokmnjbvcxdswertyuio</label>
+                    <input type="button" id="trashbutton">
+                </li>
+            </ul>
+            <ul class="done">
+                <li>
+                    <img src="Untitled-3.png" alt="trashbin" id="heejin">
+                    <label class="taskComplete">Test4</label>
+                    <input type="button" id="trashbutton">
+                </li>
+            </ul>
+        </div>
     </body>
 </html>
