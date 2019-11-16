@@ -3,24 +3,21 @@ html {
     background-color: rgba(240, 240, 240, 0.98)
 }
 
-body {
-    padding: 80px;
-}
-
-#mainlogo{
-    z-index: 1;
+#mainlogo {
+    position: relative;
+    z-index: 0;
     width: 120px;
     height: 80px;
     float: left;
     margin-top: -90px;
-    margin-left: -75px;
+    left: 20px;
 }
 
 #headerRec {
-    position: fixed;
+    position: relative;
+    width: 100%;
     height: 80px;
-    top: -1px;
-    left: 0px;
+    bottom: 10px;
     z-index: -1;
     background-color: rgb(0, 106, 228);
     border-bottom-left-radius: 15px;
@@ -29,15 +26,15 @@ body {
 }
 
 #headerEntry {
-    font-weight: bold;
+    position: relative;
+    bottom: 75px;
     text-indent: 15px;
     font-size: 15px;
     color: white;
-    margin-top: -75px;
-    margin-right: -20px;
     z-index: 1;
-    float: right;
-    width: 94%;
+    left: 160px;
+    float: left;
+    width: 52%;
     height: 50px;
     background: rgb(90, 167, 255);
     border-radius: 15px;
@@ -53,21 +50,23 @@ body {
 }
 
 #plussign {
-    z-index: 0;
+    position: relative;
+    z-index: 1;
     width: 40px;
     height: 40px;
-    float: right;
+    float: left;
     margin-top: -70px;
-    margin-right: -70px;
+    left: 175px;
 }
 
 button#add {
-    z-index: -1;
+    position: relative;
+    z-index: 0;
     width: 50px;
     height: 50px;
-    float: right;
+    float: left;
     margin-top: -75px;
-    margin-right: -75px;
+    left: 170px;
     background: white;
     outline: none;
     border-radius: 15px;
@@ -77,18 +76,28 @@ button#add {
 }
 
 h1 {
+    position: relative;
     font-weight: bold;
     font-size: 32px;
-    margin-left: -60px;
-    margin-top: -10px;
+    float: left;
+}
+
+#incompTitle {
+    position: relative;
+    right: 990px;
+}
+
+#comptTitle {
+    position: relative;
+    right: 740px;
 }
 
 /* Text container */
 .todo {
-    width: 110%;
+    position: relative;
+    width: 95%;
     float: left;
     margin-top: -5px;
-    margin-left: -60px;
     border-style: solid;
     border-width: 2px;
     border-color: rgb(150, 150, 150);
@@ -111,10 +120,10 @@ ul.todo li {
 
 /* Text container */
 .done {
-    width: 110%;
+    position: relative;
+    width: 95%;
     float: left;
     margin-top: -5px;
-    margin-left: -60px;
     border-style: solid;
     border-width: 2px;
     border-color: rgb(150, 150, 150);
@@ -173,6 +182,7 @@ ul.done li {
 
 #footerRec {
     position: relative;
+    opacity: 100%;
     width: 100%;
     height: 80px;
     left: 0px;
