@@ -3,7 +3,7 @@
     <head>
         <title>Basic To-Do List</title>
         <!-- CSS -->
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="ToDoList.css" rel="stylesheet" type="text/css">
         <!-- Nunito font -->
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <!-- JavaScript -->
@@ -11,14 +11,15 @@
     </head>
     <body>
         <header>
+            <!-- The blue bar behind everything -->
+            <div style="width:100%;" id="headerRec"></div>
             <!-- to.Do logo -->
             <img src="Untitled-1.png" alt="toDo logo" id="mainlogo">
             <!-- Search Bar -->
-            <input type="text" id="headerEntry" placeholder="What would you like to do today?">
-            <div style="width:100%;" id="headerRec"></div>
+            <input type="text" id="headerEntry" placeholder="Search for tasks...">
             <!-- The plus on the add button -->
             <img src="Untitled-2.png" alt="add button" id="plussign">
-            <button id="add" data-modal="modal-1"></button>
+            <button id="add"></button>
         </header>
 
         <h1 id="incompTitle">Incomplete Tasks</h1>
@@ -36,8 +37,15 @@
                     <img src="Untitled-3.png" alt="trashbin" id="heejin">
                     <label class="taskLabel">Test2</label>
                     <input type="button" id="trashbutton">
-                </li>
+                </li>       
             </ul>
+            <ul class="todo">
+                    <li>
+                        <img src="Untitled-3.png" alt="trashbin" id="heejin">
+                        <label class="taskLabel">Test3</label>
+                        <input type="button" id="trashbutton">
+                    </li>       
+                </ul>
         </div>
 
         <h1 id="compTitle">Complete Tasks</h1>
@@ -46,17 +54,25 @@
             <ul class="done">
                 <li>
                     <img src="Untitled-3.png" alt="trashbin" id="heejin">
-                    <label class="taskComplete">Test3gfdsdfghjkkkoinubyvtcrxezwsedrftgyhujikominjhbgvcfdxswertyuiopokmnjbvcxdswertyuio</label>
+                    <!-- PLEASE TEST OVERFLOWING CHARACTERS THXXX-->
+                    <label class="taskComplete">Test4gfdsdfghjkkkoinubyvtcrxezwsedrftgyhujikominjhbgvcfdxswertyuiopokmnjbvcxdswertyuio</label>
                     <input type="button" id="trashbutton">
                 </li>
             </ul>
             <ul class="done">
                 <li>
                     <img src="Untitled-3.png" alt="trashbin" id="heejin">
-                    <label class="taskComplete">Test4</label>
+                    <label class="taskComplete">Test5</label>
                     <input type="button" id="trashbutton">
                 </li>
             </ul>
+            <ul class="done">
+                    <li>
+                        <img src="Untitled-3.png" alt="trashbin" id="heejin">
+                        <label class="taskComplete">Test6</label>
+                        <input type="button" id="trashbutton">
+                    </li>
+                </ul>
         </div>
     </body>
 </html>

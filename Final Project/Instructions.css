@@ -1,0 +1,45 @@
+html {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(240, 240, 240, 0.98)
+}
+
+body{
+    padding: 80px;
+}
+
+#mainlogo{
+    z-index: 1;
+    width: 120px;
+    height: 80px;
+    float: left;
+    margin-top: -90px;
+    margin-left: -75px;
+}
+
+#headerRec {
+    position: fixed;
+    height: 80px;
+    top: -1px;
+    left: 0px;
+    z-index: -1;
+    background-color: rgb(0, 106, 228);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 4px 6px rgb(170, 170, 170);
+}
+
+h1{
+    font-weight: bold;
+    font-size: 35px;
+    position: relative;
+    bottom: 10px;
+    right: 60px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    right: 35px;
+    bottom: 20px;
+}
