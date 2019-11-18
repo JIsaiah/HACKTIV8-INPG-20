@@ -1,6 +1,6 @@
 html {
     font-family: 'Nunito', sans-serif;
-    background-color: rgba(240, 240, 240, 0.98)
+    background-color: rgba(240, 240, 240, 0.98);
 }
 
 #mainlogo {
@@ -82,13 +82,11 @@ h1 {
     float: left;
 }
 
-#incompTitle {
-    position: relative;
-    right: 990px;
+#incompTitle {  /* FIX THIS PLS */
+    left: -800px;
 }
 
 #comptTitle {
-    position: relative;
     right: 740px;
 }
 
@@ -147,10 +145,11 @@ ul.done li {
 }
 
 #heejin { /* Trash Can Icon */
+    position: relative;
     width: 30px;
     height: 30px;
-    float: right;
-    margin-right: -65px;
+    float: left;
+    left: 1270px;
 }
 
 #trashbutton {
