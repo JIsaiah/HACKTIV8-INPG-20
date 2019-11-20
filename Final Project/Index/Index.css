@@ -221,7 +221,7 @@ ul.done li {
     font-size: 30px;
     text-decoration: none;
     top: 940px;
-    left: -380px;
+    left: -220px;
 }
 
 #socmed {
@@ -231,7 +231,7 @@ ul.done li {
     font-size: 30px;
     text-decoration: none;
     top: 940px;
-    left: -330px;
+    left: -190px;
 }
 
 #urtasks {
@@ -250,6 +250,8 @@ ul.done li {
     position: relative;
     top: -20px;
     float: left;
+    left: 200px;
+    margin: -30px;
     color: rgb(132, 0, 194);
 }
 
