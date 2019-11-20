@@ -1,6 +1,8 @@
 html {
     font-family: 'Nunito', sans-serif;
     background-color: rgba(240, 240, 240, 0.98);
+    width: auto;
+    max-width: 1920px;
 }
 
 #mainlogo {
@@ -34,7 +36,7 @@ html {
     z-index: 1;
     left: 160px;
     float: left;
-    width: 52%;
+    width: 55%;
     height: 50px;
     background: rgb(90, 167, 255);
     border-radius: 15px;
@@ -80,21 +82,22 @@ h1 {
     font-weight: bold;
     font-size: 32px;
     float: left;
-    z-index: 1;
+    z-index: 0;
 }
 
 #urtasks {
-    color: transparent;
-    font-size: 1px;
+    font-size: 40px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     float: left;
     margin: 0px;
     width: 1920px;
+    top: -30px;
 }
 
 /* Text container */
 .todo {
+    z-index: 0;
     position: relative;
     width: 95%;
     float: left;
@@ -109,6 +112,7 @@ h1 {
 }
 
 ul.todo li {
+    z-index: 0;
     width: 90%;
     height: 50px;
     float: left;
@@ -147,48 +151,62 @@ ul.done li {
     font-size: 22px;
 }
 
+#checkbox {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: left;
+    left: 0px;
+    color: rgb(150, 150, 150);
+}
+
 #heejin { /* Trash Can Icon */
     position: relative;
     width: 30px;
     height: 30px;
-    float: left;
-    left: 1270px;
+    float: right;
+    right: -80px;
 }
 
 #trashbutton {
-    z-index: 0;
-    width: 90%;
+    position: relative;
+    z-index: 1;
+    width: 10%;
     height: 70px;
-    float: left;
+    float: right;
     margin-top: -18px;
-    margin-left: -20px;
     border-radius: 15px; 
     background-color: transparent;
     outline: none;
     border: none;
+    right: -130px;
 }
 
 .taskLabel {
+    z-index: 1;
     float: left;
     max-width: 95%;
     overflow: hidden;
-    margin-left: 45px;
+    left: 15px;
+    position: relative;
 }
 
 .taskComplete {
+    z-index: 1;
     float: left;
     max-width: 95%;
     overflow: hidden;
-    margin-left: 45px;
+    left: 15px;
+    position: relative;
 }
 
 #footerRec {
     position: relative;
-    opacity: 100%;
     width: 100%;
     height: 80px;
     left: 0px;
-    bottom: -100px;
+    bottom: -1000px;
     z-index: -1;
     background-color: rgb(0, 106, 228);
     border-top-left-radius: 15px;
@@ -196,20 +214,116 @@ ul.done li {
     box-shadow: 0px 4px 6px rgb(170, 170, 170);
 }
 
-.links {
+#about {
     position: relative;
     color: white;
     font-weight: bold;
     font-size: 30px;
     text-decoration: none;
-}
-
-#about {
-    top: 60px;
-    left: 20px;
+    top: 940px;
+    left: -380px;
 }
 
 #socmed {
-    top: 60px;
-    left: 60px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    top: 940px;
+    left: -330px;
+}
+
+#urtasks {
+    color: transparent;
+    font-size: 1px;
+}
+
+#myBtn {
+    outline: none;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: transparent;
+    text-decoration: underline;
+    position: relative;
+    top: -20px;
+    float: left;
+    color: rgb(132, 0, 194);
+}
+
+#enterLogin {
+    position: relative;
+    margin: 5px;
+    top: -10px;
+    left: -5px;
+    font-size: 30px;
+}
+
+#spacer {
+    color: transparent;
+    font-size: 3px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    width: 80%;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 6px 6px 6px rgb(170, 170, 170);
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+    left: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#usernameInput {
+    position: relative;
+    right: -3px;
+    top: -3px;
+}
+
+#passwordInput {
+    position: relative;
+    right: -7px;
+    top: -3px;
+}
+
+#signUpLink {
+    font-size: 15px;
 }
