@@ -23,12 +23,20 @@
             <fieldset>
                 <legend>Personal Information</legend>
                 <p>
-                    <label for="full-name">Full Name:</label>
-                    <input id="full-name" name="fullName" type="text">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" name="fisrtName" type="text">
+                </p>
+                <p>
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" name="lastName" type="text">
                 </p>
                 <p>
                     <label for="email">Email Address:</label>
                     <input id="email" name="email" type="email">
+                </p>
+                <p>
+                    <label for="age">Age:</label>
+                    <input id="inputAge" name="age" type="number">
                 </p>
             </fieldset>
             <br>
@@ -43,7 +51,29 @@
                     <input id="confirmPassword" name="confirmpassWord" type="text">
                 </p>
             </fieldset>
+            <br>
+            <fieldset>
+                <legend>Misc. Information (optional)</legend>
+                <p>
+                    <label for="wFound">Where did you find out about to.Do?</label>
+                    <input id="fromFriends" name="friends" type="radio">Friends</input>
+                    <input id="fromWork" name="work" type="radio">Work</input>
+                    <input id="fromSchool" name="school" type="radio">School</input>
+                    <input id="fromOnline" name="online" type="radio">Online</input>
+                    <br>
+                    <label for="other" id="fromOther">Other:</label>
+                    <input id="fromOther" name="other" type="text">
+                </p>
+                <p>
+                    <label for="use">What will you be using to.Do for?</label>
+                    <input id="inputUse" name="forUse" type="text">
+                </p>
+            </fieldset>
         </form>
+        <br>
+        <form action="../Index/Index.html" method="POST">
+                <input type="submit" value="Submit" id="sendButton"></input>
+            </form>
     </body>
     <footer>
             <div id="footerRec"></div>

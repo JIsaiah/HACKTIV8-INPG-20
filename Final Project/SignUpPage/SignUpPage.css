@@ -52,6 +52,63 @@ legend {
     font-size: 22px;
 }
 
+input[type=text] {
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    text-indent: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    width: 40%;
+}
+
+input[type=password] {
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    text-indent: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    width: 40%;
+}
+
+input[type=email] {
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    text-indent: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    width: 40%;
+}
+
+input[type=number] {
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    text-indent: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    width: 6%;
+}
+
+#fromOther {
+    position: relative;
+    left: 285px;
+}
+
+#inputUse {
+    width: 99%;
+    height: 20px;
+    line-height: 120%;
+}
+
+#sendButton {
+    background-color: white;
+    border-radius: 15px;
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
 #footerRec {
     position: relative;
     width: 100%;
