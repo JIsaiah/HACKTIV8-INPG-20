@@ -80,14 +80,17 @@ h1 {
     font-weight: bold;
     font-size: 32px;
     float: left;
+    z-index: 1;
 }
 
-#incompTitle {  /* FIX THIS PLS */
-    left: -800px;
-}
-
-#comptTitle {
-    right: 740px;
+#urtasks {
+    color: transparent;
+    font-size: 1px;
+    position: relative;
+    z-index: 1;
+    float: left;
+    margin: 0px;
+    width: 1920px;
 }
 
 /* Text container */
