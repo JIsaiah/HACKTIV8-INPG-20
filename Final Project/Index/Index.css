@@ -257,8 +257,8 @@ footer {
     text-decoration: underline;
     position: relative;
     float: left;
-    top: -15px;
-    left: 10px;
+    top: 10px;
+    left: -200px;
     margin: -20px;
     color: rgb(132, 0, 194);
     z-index: 1;
@@ -357,4 +357,27 @@ input {
 
 #signUpLink {
     font-size: 15px;
+}
+
+#darkmode {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    float: right;
+    right: 5px;
+    top: 460px;
+    border-radius: 100px;
+    background-color: white;
+    font-weight: bold;
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+}
+
+#dmicon {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    float: right;
+    right: 8px;
+    top: 463px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="test">
     <head>
         <title>to.Do (Online List App)</title>
         <!-- CSS -->
@@ -18,9 +18,21 @@
             <img src="Untitled-1.png" alt="toDo logo" id="mainlogo">
             <!-- Search Bar -->
             <input type="text" id="headerEntry" placeholder="Search for tasks...">
+                <script>
+                    var textInput = document.getElementById('headerEntry');
+                    var addInput = document.getElementById('add');
+                    addInput.onclick = function() {
+                        console.log('it works')
+                    }
+                </script>
             <!-- The plus on the add button -->
             <img src="Untitled-2.png" alt="add button" id="plussign">
             <button id="add"></button>
+                <script>
+                    add.onclick = function() {
+                        console.log('sdfius')
+                    }
+                </script>
         </header>
 
         <!-- Trigger/Open The Modal -->
@@ -107,7 +119,7 @@
         <h1 id="compTitle">Complete Tasks</h1>
         <div class="doneContainer">
             <!-- Completed task container -->
-            <ul class="done">
+            <ul id="finishedCont" class="done">
                 <li>
                     <img src="Untitled-4.png" alt="checkbox" id="checkbox">
                     <img src="Untitled-3.png" alt="trashbin" id="heejin">
@@ -116,7 +128,7 @@
                     <input type="button" id="trashbutton">
                 </li>
             </ul>
-            <ul class="done">
+            <ul id="finishedCont" class="done">
                 <li>
                     <img src="Untitled-4.png" alt="checkbox" id="checkbox">
                     <img src="Untitled-3.png" alt="trashbin" id="heejin">
@@ -124,7 +136,7 @@
                     <input type="button" id="trashbutton">
                 </li>
             </ul>
-            <ul class="done">
+            <ul id="finishedCont" class="done">
                 <li>
                     <img src="Untitled-4.png" alt="checkbox" id="checkbox">
                     <img src="Untitled-3.png" alt="trashbin" id="heejin">
@@ -133,10 +145,23 @@
                 </li>
             </ul>
         </div>
+        <button id="darkmode"><image src="nightmode-512.png" id="dmicon"></image></button>
+            <script>
+                var darkmodebutton = document.getElementById('darkmode')
+
+                darkmodebutton.onclick = function() {
+                    document.getElementById('test').style.backgroundColor = "rgb(25, 25, 25)";
+                    document.getElementById('incompTitle').style.color = "rgb(255, 255, 255)";
+                    document.getElementById('compTitle').style.color = "rgb(255, 255, 255)";
+                    document.getElementById('finishedCont').style.color = "rgb(100, 100, 100)";
+                    document.getElementById('darkmode').style.backgroundColor = "rgb(170, 170, 170)";
+                    document.getElementById('headerRec').style.boxShadow = "0px 0px 0px rgb(100, 100, 100);";
+                }
+            </script>
         <!--LMAO ADD DARK MODE HERE THAT WOULD BE COOL. USE ABSOLUTE FLOATING ICON THAT CHANGES BACKGROUND
             AND ACTIVITY CONTAINER COLORS.-->
     </body>
-            <div id="footerRec"></div>
-            <a href="../Instructions/Instructions.html" class="links" id="about">About to.Do</a>
-            <a href="../SocMed/SocMed.html" class="links" id="socmed">Our Social Media</a>
+        <div id="footerRec"></div>
+        <a href="../Instructions/Instructions.html" class="links" id="about">About to.Do</a>
+        <a href="../SocMed/SocMed.html" class="links" id="socmed">Our Social Media</a>
 </html>
