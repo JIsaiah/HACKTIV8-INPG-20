@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <head>
         <title>Sign up for to.Do</title>
         <!-- CSS -->
@@ -7,7 +7,7 @@
         <!-- Nunito font -->
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <!-- JavaScript -->
-        <script src="SignUpPage.js"></script>
+        <script src="../SignUpPage/SignUpPage.js"></script>
     </head>
 
     <body>
@@ -18,13 +18,13 @@
             <img src="Untitled-1.png" alt="toDo logo" id="mainlogo">
         </header>
 
-        <h1>Sign up for to.Do</h1>
+        <h1 id="signintext">Sign up for to.Do</h1>
         <form>
-            <fieldset>
+            <fieldset id="pinfo">
                 <legend>Personal Information</legend>
                 <p>
                     <label for="firstName">First Name:</label>
-                    <input id="firstName" name="fisrtName" type="text">
+                    <input id="firstName" name="firstName" type="text">
                 </p>
                 <p>
                     <label for="lastName">Last Name:</label>
@@ -40,7 +40,7 @@
                 </p>
             </fieldset>
             <br>
-            <fieldset>
+            <fieldset id="pwordfield">
                 <legend>Password</legend>
                 <p>
                     <label for="password">Password:</label>
@@ -52,7 +52,7 @@
                 </p>
             </fieldset>
             <br>
-            <fieldset>
+            <fieldset id="miscinfofield">
                 <legend>Misc. Information (optional)</legend>
                 <p>
                     <label for="wFound">Where did you find out about to.Do?</label>
@@ -71,13 +71,12 @@
             </fieldset>
         </form>
         <br>
-        <form action="../Index/Index.html" method="POST">
-                <input type="submit" value="Submit" id="sendButton"></input>
-            </form>
+        <button id="signedUp" onclick="submit()">Submit</input>
+        <button id="darkmode" onclick="darken()"><image src="nightmode-512.png" id="dmicon"></image></button>
     </body>
     <footer>
-            <div id="footerRec"></div>
-            <a href="../Instructions/Instructions.html" class="links" id="about">About to.Do</a>
-            <a href="../SocMed/SocMed.html" class="links" id="socmed">Our Social Media</a>
+        <div id="footerRec"></div>
+        <a href="../Instructions/Instructions.html" class="links" id="about">About to.Do</a>
+        <a href="../SocMed/SocMed.html" class="links" id="socmed">Our Social Media</a>
     </footer>
 </html>
