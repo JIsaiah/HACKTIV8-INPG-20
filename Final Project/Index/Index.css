@@ -222,6 +222,16 @@ button#add {
     position: relative;
 }
 
+/* Title of Incomplete Added tasks */
+.undoneAddedTasks {
+    z-index: 1;
+    max-width: 95%;
+    height: 50px;
+    overflow: hidden;
+    left: 0px;
+    position: relative;
+}
+
 /* Text container */
 .todo {
     z-index: -1;
@@ -377,7 +387,7 @@ ul.done li {
     position: fixed;
     float: right;
     right: 5px;
-    top: 830px;
+    top: 480px;
     border-radius: 100px;
     background-color: white;
     font-weight: bold;
@@ -392,7 +402,7 @@ ul.done li {
     position: fixed;
     float: right;
     right: 8px;
-    top: 833px;
+    top: 483px;
 }
 
 /* Blue bar at bottom of page */

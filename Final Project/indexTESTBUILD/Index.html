@@ -29,10 +29,10 @@
                 <form id="loginForm" onsubmit='return false'>
                     <label>
                         <p id="enterLogin">Please enter your login info</p>
-                        Username: ('Username' untk sementara)
+                        Username:
                         <input type="text" name="username" id="usernameInput" placeholder="Enter your username here..."/>
                         <p id="spacer">.</p>
-                        Password: ('Password' untk sementara)
+                        Password:
                         <input type="password" name="password" id="passwordInput" placeholder="Enter your password here..."/>
                         <br/>
                         <a href="../SignUpPage/SignUpPage.html" class="links" id="signUpLink">Don't have an account? Sign up here!</a>
@@ -47,37 +47,11 @@
         <h1 id="incompTitle">Incomplete Tasks</h1>
             <!-- Uncompleted task container -->
             <ul class="todo" id="incompCont">
-                <li id="undoneTask1">
+                <li id="undoneTask">
                     <label id="taskLabel1" class="taskLabel">TestLabelNumber1isdufhgisduhfgnlisudfhgnldiufgyh</label>
                     <button id="checkbutton" onclick="check()"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
                     <button id="trashbutton" onclick="trash()"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
-                    <!--START COPYING FROM HERE TILL </script>-->
-                    <button id="taskButton" onclick="taskinfo()"></button>
-                    <div id="Modal1" class="modal" onclick="closetaskdetail()">
-                        <div class="taskcontent">
-                    <!-- MODAL CONTENT -->
-                    <h1 id="taskLabel1">TestLabelNumber1</h1>
-                    <p class="taskdetails">
-                    About:<br>Status:
-                    </p> <!--ADD MORE TASK DETAILS-->
-                    <script>
-                        var modal1 = document.getElementById("Modal1");
-                        var taskbtn = document.getElementById("taskButton");
-                        var closetask = document.getElementsByClassName("close")[0];
-                    </script>
-                </li>
-                <li id="undoneTask2">
-                    <label class="taskLabel">TestLabelNumber2shfodnguhsnidfghikusrdifughnikrshgtiu</label>
-                    <button id="checkbutton"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
-                    <button id="trashbutton"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
-                    
-                </li>       
-                <li id="undoneTask3">
-                    <label class="taskLabel">TestLabelNumber3</label>
-                    <button id="checkbutton"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
-                    <button id="trashbutton"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
-
-                </li>       
+                </li>      
             </ul>
 
         <!--COMPLETE TASKS ARE A WIP AND ARE NOT READY FOR USE-->
@@ -85,36 +59,12 @@
         <div class="doneContainer">
             <!-- Completed task container -->
             <ul id="finishedCont" class="done">
-                <li id="doneTask1">
+                <li id="doneTask">
                     <label class="taskComplete">TestLabelNumber4skdfghsdhfghnsdkfghnhrsehnjnhjnhhnu</label>
                     <button id="checkbutton"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
-                    <button id="trashbutton"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
-                    <button id="taskButton" onclick="taskinfo()"></button>
-                    <div id="Modal1" class="modal" onclick="closetaskdetail()">
-                        <div class="taskcontent">
-                    <!-- MODAL CONTENT -->
-                    <h1 id="taskLabel1">TestLabelNumber1</h1>
-                    <p class="taskdetails">
-                    About:<br>Status:
-                    </p> <!--ADD MORE TASK DETAILS-->
-                    <script>
-                        var modal1 = document.getElementById("Modal1");
-                        var taskbtn = document.getElementById("taskButton");
-                        var closetask = document.getElementsByClassName("close")[0];
-                    </script>
+                    <button id="trashbutton" onclick="trash()"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
                 </li>
-                <li id="doneTask2">
-                    <label class="taskComplete">TestLabelNumber5</label>
-                    <button id="checkbutton"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
-                    <button id="trashbutton"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
-
-                </li>
-                <li id="doneTask3">
-                    <label class="taskComplete">TestLabelNumber6</label>
-                    <button id="checkbutton"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
-                    <button id="trashbutton"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
-
-                </li>
+            </ul>
         </div>
         <button id="darkmode" onclick="darken()"><image src="nightmode-512.png" id="dmicon"></image></button>
     </body>

@@ -19,59 +19,29 @@
         </header>
 
         <h1 id="signintext">Sign up for to.Do</h1>
+        <h3 id="why">You need to sign up for to.Do because your tasks will be
+            saved to your local storage so only you can access your tasks
+            on your device.
+        </h3>
         <form>
             <fieldset id="pinfo">
-                <legend>Personal Information</legend>
+                <legend>Please fill out the fields below</legend>
                 <p>
-                    <label for="firstName">First Name:</label>
-                    <input id="firstName" name="firstName" type="text">
+                    <label for="uName">Username:</label>
+                    <input id="userName" name="username" type="text">
                 </p>
-                <p>
-                    <label for="lastName">Last Name:</label>
-                    <input id="lastName" name="lastName" type="text">
-                </p>
-                <p>
-                    <label for="email">Email Address:</label>
-                    <input id="email" name="email" type="email">
-                </p>
-                <p>
-                    <label for="age">Age:</label>
-                    <input id="inputAge" name="age" type="number">
-                </p>
-            </fieldset>
-            <br>
-            <fieldset id="pwordfield">
-                <legend>Password</legend>
                 <p>
                     <label for="password">Password:</label>
                     <input id="password" name="passWord" type="text">
                 </p>
                 <p>
                     <label for="confirmPassword">Confirm password:</label>
-                    <input id="confirmPassword" name="confirmpassWord" type="text">
-                </p>
-            </fieldset>
-            <br>
-            <fieldset id="miscinfofield">
-                <legend>Misc. Information (optional)</legend>
-                <p>
-                    <label for="wFound">Where did you find out about to.Do?</label>
-                    <input id="fromFriends" name="friends" type="radio">Friends</input>
-                    <input id="fromWork" name="work" type="radio">Work</input>
-                    <input id="fromSchool" name="school" type="radio">School</input>
-                    <input id="fromOnline" name="online" type="radio">Online</input>
-                    <br>
-                    <label for="other" id="fromOther">Other:</label>
-                    <input id="fromOther" name="other" type="text">
-                </p>
-                <p>
-                    <label for="use">What will you be using to.Do for?</label>
-                    <input id="inputUse" name="forUse" type="text">
+                    <input id="confirmPassword" name="confirmpassWord" type="password">
                 </p>
             </fieldset>
         </form>
         <br>
-        <button id="signedUp" onclick="submit()">Submit</input>
+        <input type="submit" value="Submit" id="signedUp" onclick="sendinfo()"></input>
         <button id="darkmode" onclick="darken()"><image src="nightmode-512.png" id="dmicon"></image></button>
     </body>
     <footer>
