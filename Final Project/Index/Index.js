@@ -53,7 +53,7 @@ function addbutton() {
 
         // Adding the checkbox
         var boximg = document.createElement('img');
-        boximg.src = "../index/Untitled-4.png";
+        boximg.src = "../indexTESTBUILD/Untitled-4.png";
         checkbutton.appendChild(boximg);
         var imgid = document.createAttribute('id');
         imgid.value = 'checkbox';
@@ -71,7 +71,7 @@ function addbutton() {
 
         // Adding the trash bin icon
         var trashbinicon = document.createElement('img');
-        trashbinicon.src = "../index/Untitled-3.png";
+        trashbinicon.src = "../indexTESTBUILD/Untitled-3.png";
         trashbutton.appendChild(trashbinicon);
         var trashid = document.createAttribute('id');
         trashid.value = 'heejin';
@@ -90,10 +90,10 @@ var x = 0;
 
 function check() {
     if (x == 0){
-        document.getElementById('checkbox').src = "../index/Untitled-5.png"
+        document.getElementById('checkbox').src = "../indexTESTBUILD/Untitled-5.png"
         x = 1;
     } else{
-        document.getElementById('checkbox').src = "../index/Untitled-4.png"
+        document.getElementById('checkbox').src = "../indexTESTBUILD/Untitled-4.png"
         x = 0;
     }
     console.log('check works') //!PLACEHOLDER TEXT
@@ -111,7 +111,7 @@ var x = '0';
 
 function darken() {
     if (x == '0'){
-        document.getElementById('dmicon').src = "../index/i24_photoedit_brightness-512.png";
+        document.getElementById('dmicon').src = "../indexTESTBUILD/i24_photoedit_brightness-512.png";
         document.getElementById('html').style.backgroundColor = "rgb(25, 25, 25)";
         document.getElementById('incompTitle').style.color = "rgb(255, 255, 255)";
         document.getElementById('compTitle').style.color = "rgb(255, 255, 255)";
@@ -119,7 +119,7 @@ function darken() {
         document.getElementById('headerRec').style.boxShadow = "0px 4px 6px black;";
         x = '1';
     } else{
-        document.getElementById('dmicon').src = "../index/nightmode-512.png";
+        document.getElementById('dmicon').src = "../indexTESTBUILD/nightmode-512.png";
         document.getElementById('html').style.backgroundColor = "rgb(240, 240, 240, 0.98)";
         document.getElementById('incompTitle').style.color = "rgb(0, 0, 0)";
         document.getElementById('compTitle').style.color = "rgb(0, 0, 0)";

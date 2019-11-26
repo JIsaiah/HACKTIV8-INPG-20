@@ -1,6 +1,6 @@
 html {
     font-family: 'Nunito', sans-serif;
-    background-color: rgba(240, 240, 240, 0.98)
+    background-color: rgb(240, 240, 240, 0.98)
 }
 
 #mainlogo {
@@ -79,6 +79,31 @@ p {
     font-weight: bold;
     font-size: 30px;
     text-decoration: none;
+}
+
+/* Dark Mode Button */
+#darkmode {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    float: right;
+    right: 5px;
+    top: 480px;
+    border-radius: 100px;
+    background-color: white;
+    font-weight: bold;
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+}
+
+/* Dark Mode Moon/Star Icon */
+#dmicon {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    float: right;
+    right: 8px;
+    top: 483px;
 }
 
 #about {
