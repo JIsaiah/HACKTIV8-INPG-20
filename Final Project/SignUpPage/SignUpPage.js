@@ -6,7 +6,7 @@ function sendinfo() {
     if(pword === confpword) {
         localStorage.setItem('Username', username);
         localStorage.setItem('Password', pword);
-        console.log(localStorage)
+        window.location.href = "../Index/Index.html";
     } else {
         alert('Passwords do not match! Please try again.')
     }

@@ -1,8 +1,8 @@
 //* Login Form popup
 //!PLS PUT THIS BACK IN LATER!!!!!
-/*window.onload = function openpopup1() {
+window.onload = function openpopup1() {
     myModal.style.display = "block";
-}*/
+}
 
 //* Login Info Check
 var username = localStorage.getItem('Username');
@@ -12,6 +12,7 @@ function login() {
     if(loginForm.usernameInput.value === username){
         if(loginForm.passwordInput.value === password){
             myModal.style.display = "none";
+            test()
         }
         else{
             alert("Invalid Password")
@@ -22,10 +23,77 @@ function login() {
     }
 }
 
+function test() {
+    var database = localStorage.getItem('database')
+    var databaseArr = JSON.parse(database)
+
+    for(i = 0; i < databaseArr.length; i++){
+        if(databaseArr[i].username === username) {
+            var label = document.getElementById('headerEntry').value
+            var newTask = document.createElement('li');
+            var taskArr = localStorage.getItem('database');
+            
+            // Setting the li id
+            var liid = document.createAttribute('id');
+            liid.value = 'undoneTask';
+            newTask.setAttribute('id', 'undoneTask');
+
+            // Add label
+            var labeltitle = document.createElement('label');
+            labeltitle.innerHTML = databaseArr[i].task;
+            newTask.appendChild(labeltitle);
+            var labelclass = document.createAttribute('class');
+            labelclass.value = 'taskLabel';
+            labeltitle.setAttribute('class', 'taskLabel');
+
+            // Adding checkbox button
+            var checkbutton = document.createElement('button');
+            newTask.appendChild(checkbutton);
+            var buttonid = document.createAttribute('id');
+            buttonid.value = 'checkbutton';
+            checkbutton.setAttribute('id', 'checkbutton');
+            var buttonclick = document.createAttribute('onclick');
+            buttonclick.value = 'check()';
+            checkbutton.setAttribute('onclick', 'check()');
+
+            // Adding the checkbox
+            var boximg = document.createElement('img');
+            boximg.src = "../indexTESTBUILD/Untitled-4.png";
+            checkbutton.appendChild(boximg);
+            var imgid = document.createAttribute('id');
+            imgid.value = 'checkbox';
+            boximg.setAttribute('id', 'checkbox');
+
+            // Adding the trash button
+            var trashbutton = document.createElement('button');
+            newTask.appendChild(trashbutton);
+            var tbuttonid = document.createAttribute('id');
+            tbuttonid.value = 'trashbutton';
+            trashbutton.setAttribute('id', 'trashbutton');
+            var removetask = document.createAttribute('onclick');
+            removetask.value = 'trash()';
+            trashbutton.setAttribute('onclick', 'trash()');
+
+            // Adding the trash bin icon
+            var trashbinicon = document.createElement('img');
+            trashbinicon.src = "../indexTESTBUILD/Untitled-3.png";
+            trashbutton.appendChild(trashbinicon);
+            var trashid = document.createAttribute('id');
+            trashid.value = 'heejin';
+            trashbinicon.setAttribute('id', 'heejin');
+
+            // Appending the final li
+            document.getElementById('incompCont').appendChild(newTask);
+        }
+    }
+}
+
 //* For the search bar/add button
 function addbutton() {
     var label = document.getElementById('headerEntry').value
     var newTask = document.createElement('li');
+    var taskArr = localStorage.getItem('database');
+    var data = [];
 
     if(label !== '') {
         // Setting the li id
@@ -79,10 +147,28 @@ function addbutton() {
 
         // Appending the final li
         document.getElementById('incompCont').appendChild(newTask);
+
+        if(taskArr === null) {
+            //make taskArr
+            data = [{
+                task: document.getElementById('headerEntry').value,
+                username: localStorage.getItem('Username')
+            }]
+            localStorage.setItem('database', JSON.stringify(data))
+
+        } else {
+            //push newTask into taskArr
+            data = JSON.parse(taskArr)
+            data.push({
+                task: document.getElementById('headerEntry').value,
+                username: localStorage.getItem('Username')
+            })
+            localStorage.setItem('database', JSON.stringify(data))
+        }
+    } else {
+        alert('Please enter your task in the bar above');
     }
 }
-
-//! FIGURE OUT HOW TO SAVE ADDED TASKS TO LOCAL STORAGE ITS A REAL PAIN THE ASS
 
 
 //* Check Button
