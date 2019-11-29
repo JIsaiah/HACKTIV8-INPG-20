@@ -23,25 +23,6 @@ h1 {
 input {
     width: 90%;
     height: 25px;
-    font-size: 20px;
-    color: white;
-}
-
-#page-container {
-    position: relative;
-    min-height: 100vh;
-}
-
-#content-wrap {
-    padding-bottom: 2.5rem;
-}
-
-#footer {
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    height: 100%;
-    height: 2.5rem;
 }
 
 /* LOGIN POPUP ELEMENTS */
@@ -184,7 +165,6 @@ input {
     color: white;
     opacity: 0.8;
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
 }
 
 /* Plus img on add button */
@@ -218,13 +198,14 @@ button#add {
 /* Placeholder text to prevent bad text formatting */
 #urtasks {
     position: relative;
-    z-index: 0;
     float: left;
-    margin: 0px;
-    width: 100%;
-    top: -30px;
-    font-size: 1px;
-    color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+    top: -50px;
+    margin-bottom: -50px;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 /* Incomplete Task Label */
@@ -319,27 +300,6 @@ ul.done li {
     font-size: 22px;
 }
 
-/* Checkbox img */
-#checkbox {
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    float: left;
-    left: 190px;
-}
-
-#checkbutton {
-    float: left;
-    position: relative;
-    left: -200px;
-    top: -10px;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-}
-
 /* Button to open Detail Modal */
 #taskButton {
     z-index: 1;
@@ -383,7 +343,7 @@ ul.done li {
     width: 30px;
     height: 30px;
     float: right;
-    left: 25px;
+    left: -5px;
 }
 
 #trashbutton {
@@ -398,6 +358,13 @@ ul.done li {
     outline: none;
     border: none;
     left: 75px;
+}
+
+#wipnotice{
+    position: relative;
+    color: red;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 /* Dark Mode Button */
@@ -447,7 +414,7 @@ ul.done li {
     font-size: 30px;
     text-decoration: none;
     top: 940px;
-    left: 20px;
+    left: -220px;
 }
 
 /* to.Do social media link (kyk ada aja) */
@@ -458,6 +425,6 @@ ul.done li {
     font-size: 30px;
     text-decoration: none;
     top: 940px;
-    left: 70px;
+    left: -190px;
 }
 
