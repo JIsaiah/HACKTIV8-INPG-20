@@ -7,12 +7,22 @@ window.onload = function openpopup1() {
 //* Login Info Check
 var username = localStorage.getItem('Username');
 var password = localStorage.getItem('Password');
+var exampletaskstat = localStorage.getItem('exampletask')
+var extask = document.getElementById('undoneTaskExample')
+var incompCont = document.getElementById('incompCont')
 
 function login() {
     if(loginForm.usernameInput.value === username){
         if(loginForm.passwordInput.value === password){
             myModal.style.display = "none";
             test()
+            if(exampletaskstat == 'off'){
+                console.log('off')
+                incompCont.parentNode.removeChild()
+            } else{
+                console.log('on')
+
+            }
         }
         else{
             alert("Invalid Password")
@@ -46,24 +56,6 @@ function test() {
             labelclass.value = 'taskLabel';
             labeltitle.setAttribute('class', 'taskLabel');
 
-            // Adding checkbox button
-            var checkbutton = document.createElement('button');
-            newTask.appendChild(checkbutton);
-            var buttonid = document.createAttribute('id');
-            buttonid.value = 'checkbutton';
-            checkbutton.setAttribute('id', 'checkbutton');
-            var buttonclick = document.createAttribute('onclick');
-            buttonclick.value = 'check()';
-            checkbutton.setAttribute('onclick', 'check()');
-
-            // Adding the checkbox
-            var boximg = document.createElement('img');
-            boximg.src = "../indexTESTBUILD/Untitled-4.png";
-            checkbutton.appendChild(boximg);
-            var imgid = document.createAttribute('id');
-            imgid.value = 'checkbox';
-            boximg.setAttribute('id', 'checkbox');
-
             // Adding the trash button
             var trashbutton = document.createElement('button');
             newTask.appendChild(trashbutton);
@@ -94,6 +86,7 @@ function addbutton() {
     var newTask = document.createElement('li');
     var taskArr = localStorage.getItem('database');
     var data = [];
+    var exampleTask = document.getElementById('undoneTaskExample')
 
     if(label !== '') {
         // Setting the li id
@@ -108,24 +101,6 @@ function addbutton() {
         var labelclass = document.createAttribute('class');
         labelclass.value = 'taskLabel';
         labeltitle.setAttribute('class', 'taskLabel');
-
-        // Adding checkbox button
-        var checkbutton = document.createElement('button');
-        newTask.appendChild(checkbutton);
-        var buttonid = document.createAttribute('id');
-        buttonid.value = 'checkbutton';
-        checkbutton.setAttribute('id', 'checkbutton');
-        var buttonclick = document.createAttribute('onclick');
-        buttonclick.value = 'check()';
-        checkbutton.setAttribute('onclick', 'check()');
-
-        // Adding the checkbox
-        var boximg = document.createElement('img');
-        boximg.src = "../indexTESTBUILD/Untitled-4.png";
-        checkbutton.appendChild(boximg);
-        var imgid = document.createAttribute('id');
-        imgid.value = 'checkbox';
-        boximg.setAttribute('id', 'checkbox');
 
         // Adding the trash button
         var trashbutton = document.createElement('button');
@@ -148,8 +123,12 @@ function addbutton() {
         // Appending the final li
         document.getElementById('incompCont').appendChild(newTask);
 
+        // Delete the example task
+        exampleTask.parentNode.removeChild(undoneTaskExample)
+
+        localStorage.setItem('exampletask', 'off')
+
         if(taskArr === null) {
-            //make taskArr
             data = [{
                 task: document.getElementById('headerEntry').value,
                 username: localStorage.getItem('Username')
@@ -157,7 +136,6 @@ function addbutton() {
             localStorage.setItem('database', JSON.stringify(data))
 
         } else {
-            //push newTask into taskArr
             data = JSON.parse(taskArr)
             data.push({
                 task: document.getElementById('headerEntry').value,
@@ -170,26 +148,20 @@ function addbutton() {
     }
 }
 
-
-//* Check Button
-var x = 0;
-
-function check() {
-    if (x == 0){
-        document.getElementById('checkbox').src = "../indexTESTBUILD/Untitled-5.png"
-        x = 1;
-    } else{
-        document.getElementById('checkbox').src = "../indexTESTBUILD/Untitled-4.png"
-        x = 0;
-    }
-    console.log('check works') //!PLACEHOLDER TEXT
-}
-
 //* Trash Button
-function trash() { //! SO FAR THIS IS ONLY ABLE TO REMOVE THE FINISHED TASK, MAKE IT SO THAT IT CAN MVOE TO COMPLETE TASKS
-    console.log('heehee') //!PLACEHOLDER TEXT
-    document.getElementById('undoneTask1').remove();
-    
+function trash() {
+    var yn = confirm('Are you sure? This deletes the top most task.');
+    var database = localStorage.getItem('database')
+
+    if(yn == true){
+    var tasktoremove = document.getElementById('undoneTask')
+    tasktoremove.remove()
+    removedata = JSON.parse(database)
+    removedata.shift([0])
+    localStorage.setItem('database', JSON.stringify(removedata))
+    } else{
+        alert('Your task was not deleted. Make sure to complete it!')
+    }
 }
 
 //* Dark Mode

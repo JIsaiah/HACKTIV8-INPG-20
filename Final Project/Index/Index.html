@@ -3,11 +3,11 @@
     <head>
         <title>to.Do (Online List App)</title>
         <!-- CSS -->
-        <link href="Index.css" rel="stylesheet" type="text/css">
+        <link href="INDEXTESTBUILD.css" rel="stylesheet" type="text/css">
         <!-- Nunito font -->
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <!-- JavaScript -->
-        <script src="./Index.js"></script>
+        <script src="./INDEXTESTBUILD.js"></script>
     </head>
 
     <body>
@@ -43,25 +43,25 @@
             </div>
         </div>
 
-        <h1 id="urtasks">.</h1> <!--Placeholder text to prevent bad text formatting-->
+        <h1 id="urtasks">to.Do aims to make sure you complete all current tasks before starting new ones. to.Do so (badum-tss), deleting
+            a task will delete the top-most task, so ensure you have completed that task before completing another.
+        </h1> <!--Placeholder text to prevent bad text formatting-->
         <h1 id="incompTitle">Incomplete Tasks</h1>
             <!-- Uncompleted task container -->
             <ul class="todo" id="incompCont">
                 <li id="undoneTaskExample">
                     <label id="taskLabel1" class="taskLabel">Tasks you add will appear here</label>
-                    <button id="checkbutton" onclick="check()"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
                     <button id="trashbutton" onclick="trash()"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
                 </li>      
             </ul>
 
         <!--COMPLETE TASKS ARE A WIP AND ARE NOT READY FOR USE-->
-        <h1 id="compTitle">Complete Tasks</h1>
+        <h1 id="compTitle">Complete Tasks</h1> <h1 id="wipnotice">(THIS IS STILL A WIP SRY)</h1>
         <div class="doneContainer">
             <!-- Completed task container -->
             <ul id="finishedCont" class="done">
                 <li id="doneTaskExample">
                     <label class="taskComplete">Tasks you've completed will appear here</label>
-                    <button id="checkbutton"><img src="Untitled-4.png" alt="checkbox" id="checkbox"></button>
                     <button id="trashbutton" onclick="trash()"><img src="Untitled-3.png" alt="trashbin" id="heejin"></button>
                 </li>
             </ul>
